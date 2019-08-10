@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel = "stylesheet" href = "style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <title>Mars Info</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <div class="jumbotron text-center">
+      <h1>Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">U P D A T E </a></p>
+    </div>
+  </div>
+    <!-- Mars  -->
+    <div class="row" >
+      <div class="col-md-6">
+        <h2> Latest news on Mars</h2>
+        <h4 class="heading"><b>{{Marss.news_title}}</b></h4>
+        <p class = 'font'> {{Marss.news_info}}</p>
+      </div>
+      <div class = col-md-6>
+        <h2> Mars Weather</h2>
+        <p> <b>{{ Marss.mars_weather}}</b> </p>
+      </div>
+    </div>
+
+  <div class = container-fluid>
+    <div class = "row blah">
+      <div class = "col-md-6" style = "padding-left: 0px;">
+        <div class="thumbnail">
+          <h2> Featured Image</h2>
+          <!-- <p> {{Marss.url_image}}</p> -->
+          <img  src = "{{Marss.url_image}}" class = "hi" alt = 'Mars' >
+        </div>
+      </div>
+
+      <div class = col-md-6>
+        <h2> Table </h2>
+        <table>
+            {% for key, value in Marsss.items() %}
+            <tr>
+                 <th> {{ key }} </th>
+                 <td> {{ value["Value"] }} </td>
+            </tr>
+            {% endfor %}
+        </table> 
+        </div>
+      </div>
+   </div>
+  
+
+  <div class = "container-fluid">
+    <h1 class = 'text-center'> Mars Hemispheres</h1>
+    <div class = "row">
+      
+
+      <div class = "col-md-3">
+        <div class="card" style = "width: 300px;">
+          <img class = "card-img-top" src = "{{ Marssss.one }}" alt = 'image 1'>
+          <div class = card-body> 
+            <h4> {{Marssss.t1}}</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class = "col-md-3">
+        <div class="card"style = "width: 300px;">
+         <img class = "card-img-top" src = "{{ Marssss.two }}" alt = 'image 2'>
+          <div class = card-body> 
+            <h4>{{Marssss.t2}}</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class = "col-md-3">
+        <div class="card"style = "width: 300px;">
+          <img class = "card-img-top" src = "{{ Marssss.three }}" alt = 'image 3'>
+            <div class = card-body> 
+              <h4>{{Marssss.t3}}</h4>
+            </div>
+        </div>
+      </div>
+
+      <div class = "col-md-3">
+        <div class="card"style = "width: 300px;">
+          <img class = "card-img-top" src = "{{ Marssss.four }}" alt = 'image 4'>
+            <div class = card-body> 
+              <h4>{{Marssss.t4}}</h4>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

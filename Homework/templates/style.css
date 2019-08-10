@@ -1,0 +1,40 @@
+font {
+font-size: 5pt;
+}
+
+
+
+#banner{
+  max-width: 100%;
+  height: auto;
+  left: 0px;
+  right: 0px;
+}
+
+#myImage{
+  width: 100%;
+  height: auto;
+  left: 0px;
+  right: 0px;
+}
+
+.container {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.hi {
+  align-content: left;
+  }
+
+.blah {
+  margin:0px;
+}
+
+.lll {
+  padding-left: 0px;
+}
+
+.titles {
+  text-align: center;
+}
